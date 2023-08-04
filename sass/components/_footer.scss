@@ -30,6 +30,13 @@
   background: linear-gradient(90deg, #5eb65f, #0059af);
 }
 
+.footer__container {
+  @media screen and (max-width: $pre-tablet) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .footer__logo {
   display: block;
 

@@ -6,10 +6,10 @@
   // display: flex;
   // justify-content: center;
 
-  padding-top: 15px;
+  padding-top: 20px;
   padding-bottom: 15px;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -65,23 +65,28 @@
   justify-content: center;
   align-items: center;
 
-  width: 226px;
-  height: 59px;
+  width: 165px;
+  min-height: 40px;
 
   background: transparent;
   border: 2px solid #5eb65f;
   border-radius: 50px;
 
   color: #202e39;
-  font-size: 20px;
-  letter-spacing: 0.25px;
-  line-height: 1;
-  // text-align: center;
+  font-size: 16px;
 
   transition-duration: 250ms;
 
+  @media screen and (min-width: $tablet) and (max-width: $pre-desktop) {
+    margin-right: 30px;
+  }
+
   @media screen and (min-width: $desktop) {
     width: 260px;
+    height: 59px;
+
+    font-size: 20px;
+    letter-spacing: 0.25px;
   }
 
   &:hover,

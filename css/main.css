@@ -392,10 +392,10 @@ main {
 .header {
   position: relative;
   min-height: 80px;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-bottom: 15px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .header {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -434,20 +434,26 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 226px;
-  height: 59px;
+  width: 165px;
+  min-height: 40px;
   background: transparent;
   border: 2px solid #5eb65f;
   border-radius: 50px;
   color: #202e39;
-  font-size: 20px;
-  letter-spacing: 0.25px;
-  line-height: 1;
+  font-size: 16px;
   transition-duration: 250ms;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .header__cabinet {
+    margin-right: 30px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .header__cabinet {
     width: 260px;
+    height: 59px;
+    font-size: 20px;
+    letter-spacing: 0.25px;
   }
 }
 .header__cabinet:hover, .header__cabinet:focus {
@@ -531,24 +537,34 @@ main {
 .tariffs__title {
   margin-bottom: 30px;
   color: #202e39;
-  font-size: 32px;
+  font-size: 26px;
   letter-spacing: 0.25px;
   line-height: 1.25;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .tariffs__title {
+    font-size: 32px;
+  }
 }
 
 .tariffs__subtitle {
   margin-bottom: 20px;
   color: #202e39;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: normal;
   letter-spacing: 0.25px;
   line-height: 1.25;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .tariffs__subtitle {
+    font-size: 22px;
+    text-align: left;
+  }
 }
 
 .tariffs__list {
-  display: flex;
-  gap: 30px;
   margin-bottom: 30px;
   color: #202e39;
   font-size: 16px;
@@ -556,13 +572,52 @@ main {
   letter-spacing: 0.5px;
   line-height: 1.7;
 }
+@media screen and (min-width: 768px) {
+  .tariffs__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .tariffs__list {
+    flex-wrap: wrap;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+    row-gap: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .tariffs__list {
+    gap: 30px;
+  }
+}
 
 .tariffs__item {
   max-width: 380px;
-  width: 33%;
+  width: 90%;
   padding: 0 0 30px;
   border-radius: 8px;
   box-shadow: 0 1px 15px -1px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 767px) {
+  .tariffs__item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tariffs__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .tariffs__item {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .tariffs__item {
+    width: 30%;
+  }
 }
 
 .tariffs__item-header {
@@ -591,7 +646,12 @@ main {
 }
 
 .tariffs__item-content {
-  padding: 15px 30px 0 30px;
+  padding: 15px 41px 0 30px;
+}
+@media screen and (min-width: 360px) {
+  .tariffs__item-content {
+    padding: 15px 30px 0 30px;
+  }
 }
 
 .tariffs__appartment {
@@ -622,12 +682,30 @@ main {
   color: #32424e;
 }
 
+@media screen and (max-width: 360px) {
+  .tariffs__span--zero-cost {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 830px) {
+  .tariffs__span--zero-cost {
+    display: block;
+  }
+}
+
 .tariffs__details {
   margin-bottom: 30px;
   color: #202e39;
-  font-size: 23px;
+  font-size: 16px;
   letter-spacing: 0.25px;
   line-height: 1.25;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .tariffs__details {
+    font-size: 23px;
+    text-align: left;
+  }
 }
 
 .footer {
@@ -652,6 +730,13 @@ main {
   height: 5px;
   content: "";
   background: linear-gradient(90deg, #5eb65f, #0059af);
+}
+
+@media screen and (max-width: 767px) {
+  .footer__container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .footer__logo {
